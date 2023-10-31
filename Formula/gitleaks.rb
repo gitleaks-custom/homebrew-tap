@@ -6,21 +6,21 @@ require_relative "../custom_download_strategy"
 class Gitleaks < Formula
   desc "Gitlekas by UCMP"
   homepage "https://github.com/heechankim-gitleaks/gitleaks"
-  version "8.18.0-lgu1.15"
+  version "8.18.0-lgu1.16"
   license "mit"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.15/gitleaks_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ee508a523ce37e9d356534c0fac20651532bfa44992ed4399c17a0a4cb5d6bca"
+      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.16/gitleaks_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "9ca2429cad194713fa6183cfab7c3ce64f949afb17280a1d1f332e2d2a83781a"
 
       def install
         bin.install "gitleaks"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.15/gitleaks_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e9d84a26b3daec1e83307045cbbdabe27556920bc418c0178feebb9a9eeacc96"
+      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.16/gitleaks_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "4140bc8c55cb80c15eda937604b20c8b822f9f317f1131aae3478fee1e6afefd"
 
       def install
         bin.install "gitleaks"
@@ -30,24 +30,24 @@ class Gitleaks < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.15/gitleaks_Linux_armv6.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "55cbc9dcdc353370f532f02a6b0b768a73cc18190e4d1bf7cddcd1b8cb8fa74c"
+      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.16/gitleaks_Linux_armv6.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "fb99a750dc1ae921caa6d0b616a2301e61684df2905ede61a79a6519b6945a1d"
 
       def install
         bin.install "gitleaks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.15/gitleaks_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7c75d5717a23697c5b29a949e580d68877db6de6d41af853bb7fedeaa7e850ad"
+      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.16/gitleaks_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "fbebaaa2d03e111d1fbdcdd1dbd7fd1f84365fa04b99361285a365d2066556f5"
 
       def install
         bin.install "gitleaks"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.15/gitleaks_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "93b2040243e037a70b71c2cf0a10f2e85bf945b9fb67fa532b08bb6cbbb04648"
+      url "https://github.com/heechankim-gitleaks/gitleaks/releases/download/v8.18.0-lgu1.16/gitleaks_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "bf3b1f4a900ea2cfb19391d7e4cf88e7ffdfd12a613b422a22437a0e653086a5"
 
       def install
         bin.install "gitleaks"
